@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brooke's Closet — 18+ Uncensored Adult Creator Platform</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    /* Custom scrollbars & smooth transitions */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #08090d; }
+    ::-webkit-scrollbar-thumb { background: #271219; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #ff2a5f; }
+    
+    .glass-card {
+      background: rgba(18, 11, 16, 0.85);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 42, 95, 0.15);
+    }
+    .glass-card:hover {
+      border-color: rgba(255, 42, 95, 0.45);
+      box-shadow: 0 0 25px rgba(255, 42, 95, 0.18);
+    }
+    
+    .neon-glow-red {
+      box-shadow: 0 0 20px rgba(255, 42, 95, 0.4);
+    }
+    .neon-text-red {
+      text-shadow: 0 0 12px rgba(255, 42, 95, 0.6);
+    }
+    .sultry-gradient {
+      background: linear-gradient(135deg, #ff758c 0%, #ff2a5f 50%, #d4224c 100%);
+    }
+    .gold-shimmer {
+      background: linear-gradient(135deg, #ffe082 0%, #ffb300 50%, #ff8f00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-[#07080c] text-slate-100 min-h-screen antialiased selection:bg-[#ff2a5f] selection:text-white font-sans pb-24">
+
+  <!-- ================= TOP CLIENT DEMO CONTROLLER TOOLBAR ================= -->
+  <aside class="sticky top-0 z-50 bg-[#12090e]/95 border-b border-rose-600/30 backdrop-blur-md px-4 py-2.5 transition-all shadow-2xl">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs">
+      <div class="flex items-center space-x-2">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-bold bg-rose-600/25 text-rose-300 border border-rose-500/40">
+          <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping mr-1.5"></span>
+          🔞 18+ ADULT CLIENT PREVIEW
+        </span>
+        <span class="text-rose-200/70 hidden sm:inline">| Uncensored Adult Creator Membership UX</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <span class="text-slate-300 font-medium">Test Persona:</span>
+        <div class="inline-flex bg-black/80 p-0.5 rounded-lg border border-rose-900/60" id="role-selector">
+          <button onclick="setRole('guest')" id="btn-role-guest" class="role-btn px-2.5 py-1 rounded-md text-slate-400 hover:text-white transition-all font-medium">
+            👤 Guest (Logged Out)
+          </button>
+          <button onclick="setRole('free')" id="btn-role-free" class="role-btn px-2.5 py-1 rounded-md text-slate-400 hover:text-white transition-all font-medium">
+            🎟️ Free Member
+          </button>
+          <button onclick="setRole('vip')" id="btn-role-vip" class="role-btn px-2.5 py-1 rounded-md bg-rose-600 text-white shadow-sm font-semibold">
+            👑 VIP Uncensored
+          </button>
+          <button onclick="setRole('admin')" id="btn-role-admin" class="role-btn px-2.5 py-1 rounded-md text-amber-300 hover:text-white transition-all font-semibold">
+            🛡️ Admin / Brooke
+          </button>
+        </div>
+
+        <button onclick="toggleAgeModal(true)" class="text-rose-400 hover:text-rose-300 p-1 rounded transition" title="Show 18+ Age & Consent Gate">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= 18+ AGE GATE MODAL ================= -->
+  <div id="age-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-lg transition-opacity duration-300">
+    <div class="bg-[#140b10] border-2 border-rose-600/50 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative text-center">
+      <div class="w-20 h-20 rounded-full bg-rose-600/20 border-2 border-rose-500 text-rose-400 mx-auto flex items-center justify-center mb-5 shadow-lg shadow-rose-900/50">
+        <span class="text-3xl font-black tracking-tight">18+</span>
+      </div>
+      <h3 class="text-3xl font-serif font-black text-white mb-2 tracking-wide">ADULT CONTENT WARNING</h3>
+      <p class="text-rose-200/90 text-sm mb-5 leading-relaxed font-medium">
+        <strong>Brooke’s Closet</strong> is a premier creator-owned adult entertainment community featuring explicit nudity, sexually suggestive content, erotic videos, and adult livestreams.
+      </p>
+
+      <div class="bg-black/80 rounded-2xl p-4 text-xs text-slate-300 text-left border border-rose-950 mb-6 space-y-2">
+        <p class="text-rose-400 font-bold flex items-center gap-1.5 uppercase tracking-wider text-[11px]">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          18 U.S.C. § 2257 Legal Compliance
+        </p>
+        <p class="text-[11px] leading-relaxed text-slate-400">
+          All performers appearing on this website were 18 years of age or older at the time of creation. Records required by federal law (18 U.S.C. § 2257) are maintained by the custodian of records.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button onclick="acceptAgeGate()" class="flex-1 sultry-gradient hover:opacity-95 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-rose-900/50 text-sm transition-all tracking-wide">
+          I am 18+ &bull; Enter Uncensored
+        </button>
+        <a href="https://www.google.com" class="py-3.5 px-6 rounded-2xl border border-rose-900 text-slate-400 hover:text-white hover:bg-slate-900 transition-all text-xs font-semibold flex items-center justify-center">
+          I am under 18 &bull; Exit
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN NAVIGATION ================= -->
+  <header class="border-b border-rose-950/60 bg-[#0a0508]/85 backdrop-blur-md sticky top-10 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('home')">
+        <div class="w-11 h-11 rounded-2xl sultry-gradient p-0.5 shadow-lg shadow-rose-900/40">
+          <div class="w-full h-full bg-[#0d070b] rounded-[14px] flex items-center justify-center">
+            <span class="text-rose-400 font-serif font-black text-2xl">B</span>
+          </div>
+        </div>
+        <div>
+          <span class="text-2xl font-serif font-black tracking-tight text-white block leading-none">
+            Brooke’s <span class="text-rose-500 neon-text-red">Closet</span>
+          </span>
+          <span class="text-[10px] uppercase tracking-widest text-rose-400/90 font-bold">18+ Uncensored Adult Platform</span>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-semibold">
+        <button onclick="switchTab('home')" class="nav-tab px-3.5 py-2 rounded-xl text-rose-400 transition" id="nav-home">Home</button>
+        <button onclick="switchTab('catalog')" class="nav-tab px-3.5 py-2 rounded-xl text-slate-300 hover:text-white transition flex items-center gap-1.5" id="nav-catalog">
+          <span>🔥</span> The Vault
+        </button>
+        <button onclick="switchTab('creators')" class="nav-tab px-3.5 py-2 rounded-xl text-slate-300 hover:text-white transition flex items-center gap-1.5" id="nav-creators">
+          <span>💋</span> Performers
+        </button>
+        <button onclick="switchTab('memberships')" class="nav-tab px-3.5 py-2 rounded-xl text-slate-300 hover:text-white transition" id="nav-memberships">VIP Memberships</button>
+        <button onclick="switchTab('streams')" class="nav-tab px-3.5 py-2 rounded-xl text-slate-300 hover:text-white transition flex items-center gap-1.5" id="nav-streams">
+          <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+          Live Sessions
+        </button>
+        <button onclick="switchTab('dashboard')" class="nav-tab px-3.5 py-2 rounded-xl text-slate-300 hover:text-white transition" id="nav-dashboard">My Closet</button>
+        <button onclick="switchTab('admin')" class="nav-tab px-3.5 py-2 rounded-xl text-amber-300 hover:text-amber-200 bg-amber-500/10 border border-amber-500/20 transition hidden" id="nav-admin">
+          🛡️ Admin Studio
+        </button>
+      </nav>
+
+      <!-- User Account Action Area -->
+      <div class="flex items-center space-x-3">
+        <div id="user-badge-container" class="flex items-center space-x-3">
+          <!-- Populated by JS based on role -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+
+    <!-- ================= VIEW 1: HOME PAGE ================= -->
+    <section id="view-home" class="view-panel space-y-16">
+      
+      <!-- HERO BANNER -->
+      <div class="relative rounded-3xl overflow-hidden border border-rose-600/30 bg-gradient-to-br from-[#240a15] via-[#14060d] to-[#07080c] p-8 sm:p-14 shadow-2xl">
+        <div class="absolute -right-20 -bottom-20 w-[450px] h-[450px] bg-rose-600/20 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute -left-20 -top-20 w-80 h-80 bg-red-600/15 rounded-full blur-[90px] pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-2xl space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-600/20 border border-rose-500/40 text-rose-300 text-xs font-bold uppercase tracking-wider">
+            <span>🔥</span> 100% UNCENSORED &bull; DIRECT FROM BROOKE
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl font-serif font-black text-white tracking-tight leading-none">
+            Behind Closed Doors. <br>
+            <span class="text-rose-500 neon-text-red">Completely Naked.</span>
+          </h1>
+
+          <p class="text-rose-100/80 text-base sm:text-lg leading-relaxed font-normal">
+            No corporate censorship, no watered-down teasers. Step into my private sanctuary for uncompressed 4K nude photosets, explicit solo videos, intimate duo collabs with fellow verified adult creators, and live interactive toy broadcasts.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="switchTab('memberships')" class="px-8 py-4 rounded-2xl sultry-gradient hover:opacity-95 text-white font-bold text-sm shadow-xl shadow-rose-950 transition flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              Unlock VIP Uncensored ($19.99/mo)
+            </button>
+            <button onclick="switchTab('catalog')" class="px-6 py-4 rounded-2xl bg-black/60 hover:bg-black/90 text-slate-200 border border-rose-900/60 font-semibold text-sm transition">
+              Preview Teaser Vault
+            </button>
+          </div>
+
+          <!-- Trust & 2257 Compliance Badges -->
+          <div class="pt-6 border-t border-rose-950 flex flex-wrap items-center gap-6 text-xs text-rose-300/80">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              18 U.S.C. 2257 Age &amp; Consent Certified
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              100% Consenting Adult Performers
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              Discreet Billing (High-Risk Merchant)
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURED CREATOR SPOTLIGHT: BROOKE -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 relative">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden border-2 border-rose-600/40 bg-slate-950 shadow-2xl relative group">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80" alt="Brooke - Lead Creator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-95">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0e0508] via-transparent to-black/30"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full sultry-gradient text-white text-xs font-bold mb-2 shadow-md">
+                👑 Lead Creator &amp; Owner &bull; 18+ Verified
+              </span>
+              <h3 class="text-3xl font-serif font-black text-white">Brooke Sterling</h3>
+              <p class="text-rose-200 text-xs font-medium">Boudoir Model &bull; Explicit Solo &amp; Collab Artist &bull; Los Angeles, CA</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-rose-950/40 border border-rose-800/40 text-rose-300 text-xs font-semibold">
+            <span>🔞</span> 2257 Record Keeper ID: #BS-2026-904 (Adult Verified)
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-serif font-black text-white leading-tight">
+            "Every fantasy, completely uncensored."
+          </h2>
+          <p class="text-rose-100/80 text-base leading-relaxed">
+            I created <strong>Brooke’s Closet</strong> because I wanted a luxury, adult-friendly home free from mainstream payment bans and moralizing censorship. Here, you get access to all my uncensored full-nude shoots, private bathtub confessions, kink &amp; lingerie play, and collaborative duo scenes with other consenting adult babes.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 pt-2">
+            <div class="glass-card p-4 rounded-2xl text-center border-rose-900/40">
+              <div class="text-3xl font-black text-rose-400">140+</div>
+              <div class="text-xs text-rose-200/70 font-medium">Uncensored Sets</div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl text-center border-rose-900/40">
+              <div class="text-3xl font-black text-amber-400">4K 60fps</div>
+              <div class="text-xs text-rose-200/70 font-medium">Cinema Quality</div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl text-center border-rose-900/40">
+              <div class="text-3xl font-black text-rose-400">Live</div>
+              <div class="text-xs text-rose-200/70 font-medium">Interactive Shows</div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="switchTab('catalog')" class="px-7 py-3.5 rounded-2xl sultry-gradient hover:opacity-95 text-white font-bold text-sm transition shadow-lg shadow-rose-950">
+              Enter Brooke’s Erotic Vault &rarr;
+            </button>
+            <button onclick="switchTab('creators')" class="px-6 py-3.5 rounded-2xl bg-black/60 hover:bg-black/80 text-rose-200 border border-rose-900/40 text-sm font-semibold transition">
+              Meet Guest Performers
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOT VAULT HIGHLIGHTS (DYNAMIC ACCESS CONTROL DEMO) -->
+      <div class="space-y-6">
+        <div class="flex items-end justify-between border-b border-rose-950/60 pb-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-rose-500 text-lg">🔥</span>
+              <h2 class="text-2xl font-serif font-black text-white">Trending Adult Vault Releases</h2>
+            </div>
+            <p class="text-rose-300/70 text-xs sm:text-sm mt-0.5">Click any media card to simulate real-time server-side access control</p>
+          </div>
+          <button onclick="switchTab('catalog')" class="text-rose-400 hover:text-rose-300 text-xs sm:text-sm font-bold flex items-center gap-1">
+            Browse All 140 Items &rarr;
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="home-trending-grid">
+          <!-- Dynamically populated by renderCards() -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= VIEW 2: CONTENT VAULT / CATALOG ================= -->
+    <section id="view-catalog" class="view-panel space-y-8 hidden">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-rose-950 pb-6">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-rose-500 text-2xl">🔥</span>
+            <h1 class="text-3xl font-serif font-black text-white">The Uncensored Vault</h1>
+          </div>
+          <p class="text-rose-200/70 text-sm mt-1">
+            Full-nude high-resolution galleries, explicit 4K cinema videos, duo collaborations, and standalone vault drops.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="filterCatalog('all')" class="cat-filter px-3.5 py-1.5 rounded-xl bg-rose-600 text-white text-xs font-bold shadow-md" id="filter-all">
+            🔥 All Explicit
+          </button>
+          <button onclick="filterCatalog('sub')" class="cat-filter px-3.5 py-1.5 rounded-xl bg-slate-900 border border-rose-900/50 text-rose-300 hover:text-white text-xs font-semibold" id="filter-sub">
+            👑 VIP Uncensored
+          </button>
+          <button onclick="filterCatalog('package')" class="cat-filter px-3.5 py-1.5 rounded-xl bg-slate-900 border border-rose-900/50 text-rose-300 hover:text-white text-xs font-semibold" id="filter-package">
+            💎 Standalone PPV Drops
+          </button>
+          <button onclick="filterCatalog('free')" class="cat-filter px-3.5 py-1.5 rounded-xl bg-slate-900 border border-rose-900/50 text-rose-300 hover:text-white text-xs font-semibold" id="filter-free">
+            🆓 Free Teasers
+          </button>
+        </div>
+      </div>
+
+      <!-- Catalog Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="full-catalog-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- ================= VIEW 3: CREATORS DIRECTORY ================= -->
+    <section id="view-creators" class="view-panel space-y-8 hidden">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-rose-500 text-2xl">💋</span>
+          <h1 class="text-3xl font-serif font-black text-white">Featured Adult Creators</h1>
+        </div>
+        <p class="text-rose-200/70 text-sm mt-1">
+          Every adult performer featured on Brooke’s Closet has completed mandatory 18 U.S.C. 2257 government identification verification and explicit appearance consent waivers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Creator 1: Brooke (Lead) -->
+        <div class="glass-card rounded-3xl overflow-hidden border border-rose-600/50 relative group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover filter brightness-75">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#140b10] to-transparent"></div>
+            <div class="absolute top-3 right-3 sultry-gradient text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              Owner &bull; 18+
+            </div>
+          </div>
+          <div class="px-6 pb-6 relative -mt-12 space-y-4">
+            <div class="w-22 h-22 rounded-2xl overflow-hidden border-2 border-rose-500 shadow-2xl bg-black">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-2xl font-serif font-black text-white">Brooke Sterling</h3>
+                <span class="text-rose-500" title="18+ Verified Creator">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                </span>
+              </div>
+              <p class="text-xs text-rose-400 font-semibold">@brooke &bull; 140 Uncensored Releases</p>
+            </div>
+            <p class="text-xs text-rose-100/80 leading-relaxed font-normal">
+              Platform founder and adult model. Creating seductive nude boudoir, explicit 4K solo sessions, interactive live toy streams, and erotic collabs.
+            </p>
+            <div class="pt-2 border-t border-rose-950 text-[11px] text-slate-400 space-y-1">
+              <div><strong class="text-rose-300">2257 Record:</strong> #BS-2026-904 (Gov ID Verified)</div>
+              <div><strong class="text-rose-300">Specialties:</strong> Full Nude, Erotic Solo, Toy Control</div>
+            </div>
+            <button onclick="switchTab('catalog')" class="w-full py-3 sultry-gradient hover:opacity-95 text-white rounded-xl text-xs font-bold transition shadow-lg shadow-rose-950">
+              Unlock Brooke’s Vault
+            </button>
+          </div>
+        </div>
+
+        <!-- Creator 2: Chloe V. (Guest Collab) -->
+        <div class="glass-card rounded-3xl overflow-hidden border border-purple-600/40 relative group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover filter brightness-75">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#140b10] to-transparent"></div>
+            <div class="absolute top-3 right-3 bg-purple-600 text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              Guest Performer &bull; 18+
+            </div>
+          </div>
+          <div class="px-6 pb-6 relative -mt-12 space-y-4">
+            <div class="w-22 h-22 rounded-2xl overflow-hidden border-2 border-purple-500 shadow-2xl bg-black">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-2xl font-serif font-black text-white">Chloe V.</h3>
+                <span class="text-purple-400" title="18+ Verified Creator">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                </span>
+              </div>
+              <p class="text-xs text-purple-400 font-semibold">@chloev &bull; 18 Duo Collabs</p>
+            </div>
+            <p class="text-xs text-rose-100/80 leading-relaxed font-normal">
+              Adult glamour model and close friend of Brooke. Features in high-voltage duo collabs, sensual massage videos, and pool patio specials.
+            </p>
+            <div class="pt-2 border-t border-rose-950 text-[11px] text-slate-400 space-y-1">
+              <div><strong class="text-purple-300">2257 Record:</strong> #CV-2026-441 (Gov ID Verified)</div>
+              <div><strong class="text-purple-300">Specialties:</strong> Lesbian Duos, Outdoor Boudoir</div>
+            </div>
+            <button onclick="switchTab('catalog')" class="w-full py-3 bg-purple-700 hover:bg-purple-600 text-white rounded-xl text-xs font-bold transition shadow-lg shadow-purple-950">
+              View Chloe Collabs
+            </button>
+          </div>
+        </div>
+
+        <!-- Creator 3: Elena Noir -->
+        <div class="glass-card rounded-3xl overflow-hidden border border-amber-600/40 relative group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover filter brightness-75">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#140b10] to-transparent"></div>
+            <div class="absolute top-3 right-3 bg-amber-600 text-black text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">
+              Fetish Artist &bull; 18+
+            </div>
+          </div>
+          <div class="px-6 pb-6 relative -mt-12 space-y-4">
+            <div class="w-22 h-22 rounded-2xl overflow-hidden border-2 border-amber-500 shadow-2xl bg-black">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="text-2xl font-serif font-black text-white">Elena Noir</h3>
+                <span class="text-amber-400" title="18+ Verified Creator">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                </span>
+              </div>
+              <p class="text-xs text-amber-400 font-semibold">@elenanoir &bull; 12 Fetish Specials</p>
+            </div>
+            <p class="text-xs text-rose-100/80 leading-relaxed font-normal">
+              Dark aesthetics, latex, corsets, and dominance. Partnering with Brooke for late-night dungeon broadcasts and exclusive PPV fetish drops.
+            </p>
+            <div class="pt-2 border-t border-rose-950 text-[11px] text-slate-400 space-y-1">
+              <div><strong class="text-amber-300">2257 Record:</strong> #EN-2026-901 (Gov ID Verified)</div>
+              <div><strong class="text-amber-300">Specialties:</strong> Latex, Fetish, Midnight Shows</div>
+            </div>
+            <button onclick="switchTab('catalog')" class="w-full py-3 bg-amber-600 hover:bg-amber-500 text-black rounded-xl text-xs font-bold transition shadow-lg shadow-amber-950">
+              View Elena Collabs
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal Compliance Protocol Notice -->
+      <div class="bg-[#12070d] border border-rose-950 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 rounded-2xl bg-rose-600/10 border border-rose-500/30 flex items-center justify-center text-rose-400 shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div>
+            <h4 class="text-white font-serif font-bold text-base">Zero Unverified Uploads &bull; Strict 2257 Custody</h4>
+            <p class="text-xs text-rose-200/70 mt-0.5">
+              Public user uploads are strictly prohibited. Every creator featured must complete real-time biometric ID matching, adult age proof, and signed mutual consent before publication.
+            </p>
+          </div>
+        </div>
+        <button onclick="setRole('admin'); switchTab('admin');" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-rose-300 border border-rose-900 text-xs font-semibold shrink-0 transition">
+          View 2257 Admin Queue &rarr;
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 4: MEMBERSHIPS & PACKAGES ================= -->
+    <section id="view-memberships" class="view-panel space-y-12 hidden">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="text-rose-500 text-xs font-bold uppercase tracking-widest">Adult Subscription &amp; PPV Model</span>
+        <h1 class="text-3xl sm:text-5xl font-serif font-black text-white">Choose Your Level of Pleasure</h1>
+        <p class="text-rose-200/70 text-sm">
+          Support Brooke directly with recurring monthly uncensored memberships or buy one-off permanent vault drops. Cancel subscriptions at any time with one click.
+        </p>
+      </div>
+
+      <!-- SUBSCRIPTION TIERS (3 COLUMNS) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Plan 1: Free Account -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between border-rose-950 space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Basic Tier</span>
+              <span class="text-xs text-slate-500">Free forever</span>
+            </div>
+            <h3 class="text-2xl font-serif font-black text-white">Free Member</h3>
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-bold text-white">$0</span>
+              <span class="text-xs text-slate-400">/month</span>
+            </div>
+            <p class="text-xs text-rose-200/70">Browse SFW teasers, preview uncensored catalog drops, and buy standalone PPV packages.</p>
+            
+            <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-rose-950">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Access to censored teaser photo/video clips
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Live broadcast notifications
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Pay-Per-View one-time store access
+              </li>
+              <li class="flex items-center gap-2 text-rose-900">
+                <svg class="w-4 h-4 text-rose-900 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                Full nude &amp; explicit vault media (Locked)
+              </li>
+              <li class="flex items-center gap-2 text-rose-900">
+                <svg class="w-4 h-4 text-rose-900 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                Interactive live broadcasts &amp; chat (Locked)
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="setRole('free'); switchTab('dashboard');" class="w-full py-3.5 rounded-2xl border border-rose-900 hover:bg-slate-900 text-slate-200 text-xs font-bold transition">
+            Continue with Free Account
+          </button>
+        </div>
+
+        <!-- Plan 2: VIP Uncensored (MOST POPULAR) -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between border-2 border-rose-500 shadow-2xl relative space-y-6 bg-gradient-to-b from-[#2d0a18] to-[#12060c]">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 sultry-gradient text-white font-black text-[11px] uppercase tracking-wider py-1 px-4 rounded-full shadow-lg">
+            🔥 Most Popular Adult Pass
+          </div>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Recurring Monthly</span>
+              <span class="text-xs text-rose-300">100% Uncensored</span>
+            </div>
+            <h3 class="text-3xl font-serif font-black text-white">VIP Uncensored</h3>
+            <div class="flex items-baseline gap-1">
+              <span class="text-5xl font-black text-white">$19.99</span>
+              <span class="text-xs text-rose-200/70">/month</span>
+            </div>
+            <p class="text-xs text-rose-200/90 font-medium">Unlocks all 140+ full-nude photo sets, explicit 4K solo videos, weekly intimate vlogs, and interactive live stream access.</p>
+            
+            <ul class="text-xs text-rose-100 space-y-2.5 pt-4 border-t border-rose-900/60 font-medium">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-rose-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <strong>Full Nude Vault:</strong> 100+ photosets &amp; 4K video clips
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-rose-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Weekly private interactive adult streams &amp; live chat
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-rose-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Direct 1-on-1 erotic DM messaging with Brooke
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-rose-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Uncensored guest creator duo collaborations
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-rose-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                15% discount on all standalone PPV packages
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openCheckoutModal('sub', 'VIP Uncensored Monthly', 19.99)" class="w-full py-4 rounded-2xl sultry-gradient hover:opacity-95 text-white font-bold text-xs shadow-xl shadow-rose-950 transition uppercase tracking-wider">
+            Subscribe Now ($19.99/mo)
+          </button>
+        </div>
+
+        <!-- Plan 3: All-Access Allure Tier -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between border-amber-500/40 space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Premier Tier</span>
+              <span class="text-xs text-amber-300">All Bundles Included</span>
+            </div>
+            <h3 class="text-3xl font-serif font-black text-white">All-Access Allure</h3>
+            <div class="flex items-baseline gap-1">
+              <span class="text-5xl font-black text-white">$39.99</span>
+              <span class="text-xs text-slate-400">/month</span>
+            </div>
+            <p class="text-xs text-slate-300">The premier tier including every single past &amp; future standalone PPV bundle at zero extra cost.</p>
+            
+            <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-rose-950">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Everything included in VIP Uncensored
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <strong>ALL One-Time Vault Packages Included</strong> ($150+ value)
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Archive of all past recorded live sex shows
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Priority interactive toy control during live streams
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openCheckoutModal('sub', 'All-Access Allure Monthly', 39.99)" class="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:opacity-95 text-black font-black text-xs transition uppercase tracking-wider">
+            Join All-Access ($39.99/mo)
+          </button>
+        </div>
+
+      </div>
+
+      <!-- ONE-TIME STANDALONE PACKAGES SECTION -->
+      <div class="space-y-6 pt-6">
+        <div class="border-t border-rose-950 pt-8 flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-rose-500 text-xl">💎</span>
+              <h2 class="text-2xl font-serif font-black text-white">Standalone Uncensored PPV Drops</h2>
+            </div>
+            <p class="text-xs text-rose-200/70">One-time purchase, keep forever in your personal vault without recurring subscription charges.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Package 1 -->
+          <div class="glass-card rounded-3xl p-6 border-rose-950 flex flex-col sm:flex-row gap-6 items-center">
+            <div class="w-full sm:w-48 h-44 rounded-2xl overflow-hidden shrink-0 relative">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover">
+              <div class="absolute top-2 left-2 bg-black/90 px-2 py-0.5 rounded text-[10px] text-rose-300 font-bold border border-rose-900">
+                100% NUDE PPV
+              </div>
+            </div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-serif font-black text-white">The Velvet Bedroom Archive</h4>
+                <span class="text-xl font-black text-rose-500">$14.99</span>
+              </div>
+              <p class="text-xs text-rose-100/80 leading-relaxed">
+                45 high-resolution uncensored 4K nude photos + 18-minute 4K erotic cinema clip featuring Brooke.
+              </p>
+              <div class="text-[11px] text-rose-300/70 flex items-center gap-3 pt-1">
+                <span>📁 45 Nude Photos</span>
+                <span>🎬 18min 4K Video</span>
+                <span>🔒 Lifetime Unlocked</span>
+              </div>
+              <div class="pt-2">
+                <button onclick="openCheckoutModal('package', 'The Velvet Bedroom Archive', 14.99)" class="px-6 py-2.5 rounded-xl sultry-gradient hover:opacity-95 text-white text-xs font-bold transition shadow-md shadow-rose-950">
+                  Unlock PPV Drop ($14.99)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 2 -->
+          <div class="glass-card rounded-3xl p-6 border-purple-950 flex flex-col sm:flex-row gap-6 items-center">
+            <div class="w-full sm:w-48 h-44 rounded-2xl overflow-hidden shrink-0 relative">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover">
+              <div class="absolute top-2 left-2 bg-purple-900/90 px-2 py-0.5 rounded text-[10px] text-purple-200 font-bold border border-purple-700">
+                EXPLICIT DUO COLLAB
+              </div>
+            </div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-serif font-black text-white">Malibu Sunset Duos with Chloe</h4>
+                <span class="text-xl font-black text-purple-400">$24.99</span>
+              </div>
+              <p class="text-xs text-rose-100/80 leading-relaxed">
+                60 collaborative duo nude photos + full uncensored 25-minute golden hour lesbian play on a private villa terrace.
+              </p>
+              <div class="text-[11px] text-purple-300/70 flex items-center gap-3 pt-1">
+                <span>📁 60 Duo Photos</span>
+                <span>🎬 25min Uncut Video</span>
+                <span>🔒 Lifetime Unlocked</span>
+              </div>
+              <div class="pt-2">
+                <button onclick="openCheckoutModal('package', 'Malibu Sunset Duos with Chloe', 24.99)" class="px-6 py-2.5 rounded-xl bg-purple-700 hover:bg-purple-600 text-white text-xs font-bold transition shadow-md shadow-purple-950">
+                  Unlock PPV Drop ($24.99)
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 5: LIVESTREAM STUDIO ================= -->
+    <section id="view-streams" class="view-panel space-y-8 hidden">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-rose-950 pb-6">
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-3xl font-serif font-black text-white">Live Erotic Broadcast Studio</h1>
+            <span class="px-3 py-1 rounded-full sultry-gradient text-white text-[10px] font-black tracking-wider uppercase animate-pulse shadow-md">
+              LIVE NOW
+            </span>
+          </div>
+          <p class="text-rose-200/70 text-sm mt-1">
+            Watch live interactive adult shows, tip for explicit requests, and activate interactive toy vibrations in real time.
+          </p>
+        </div>
+
+        <div class="text-xs text-rose-300/80 bg-black/80 px-4 py-2.5 rounded-2xl border border-rose-900/60">
+          <span>Toy &amp; Streaming Provider:</span>
+          <span class="text-emerald-400 font-bold ml-1">● Lovense / CamEngine Active</span>
+          <span class="text-slate-500 ml-1">(Ultra Low Latency)</span>
+        </div>
+      </div>
+
+      <!-- STREAM PLAYER & CHAT INTERACTIVE COMPONENT -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Video Player Box (8 cols) -->
+        <div class="lg:col-span-8 space-y-4">
+          <div class="aspect-video bg-black rounded-3xl border border-rose-950 overflow-hidden relative shadow-2xl flex flex-col justify-between" id="stream-player-container">
+            <!-- Simulated Video Canvas / Stream Canvas -->
+            <div class="absolute inset-0 z-0 bg-black flex items-center justify-center">
+              <img id="stream-poster" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover filter brightness-75">
+              
+              <!-- Lock Overlay if role is Guest or Free -->
+              <div id="stream-lock-overlay" class="absolute inset-0 bg-black/90 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center space-y-4 hidden">
+                <div class="w-16 h-16 rounded-full bg-rose-600/20 text-rose-400 flex items-center justify-center border-2 border-rose-500 shadow-xl">
+                  <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-serif font-black text-white">VIP Uncensored Live Show</h3>
+                  <p class="text-xs text-rose-200/80 max-w-sm mt-1">
+                    Brooke is currently streaming naked in the bedroom. Access is restricted to active <strong>VIP Uncensored</strong> or <strong>All-Access</strong> members.
+                  </p>
+                </div>
+                <button onclick="switchTab('memberships')" class="px-8 py-3.5 rounded-2xl sultry-gradient text-white font-bold text-xs shadow-xl shadow-rose-950 hover:opacity-95 transition">
+                  Unlock Live Show ($19.99/mo)
+                </button>
+              </div>
+
+              <!-- Stream Playing Overlay Indicator -->
+              <div id="stream-playing-indicator" class="absolute top-4 left-4 flex items-center gap-2 bg-black/75 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-rose-500/30 text-xs">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+                <span class="text-white font-black tracking-wide">BROOKE IS NAKED ON CAM</span>
+                <span class="text-rose-300 ml-2 font-bold">&bull; 412 Fans Watching</span>
+              </div>
+
+              <!-- Tip Goal Meter (Top Right) -->
+              <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-md px-4 py-2 rounded-2xl border border-rose-500/30 text-xs text-right hidden sm:block">
+                <div class="text-[10px] text-rose-300 font-bold uppercase">Current Tip Goal: Topless Oil Massage</div>
+                <div class="w-48 bg-slate-800 h-2 rounded-full mt-1 overflow-hidden border border-rose-950">
+                  <div class="bg-rose-500 h-full rounded-full" style="width: 78%;"></div>
+                </div>
+                <div class="text-[10px] text-slate-300 mt-1">$390 / $500 Reached</div>
+              </div>
+            </div>
+
+            <!-- Player Controls Bottom Bar -->
+            <div class="relative z-10 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4 flex items-center justify-between text-xs text-white">
+              <div class="flex items-center space-x-3">
+                <button class="hover:text-rose-400 transition" onclick="togglePlayStream()">
+                  <svg id="play-icon" class="w-6 h-6 fill-current text-rose-500" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+                </button>
+                <span class="text-rose-200 font-semibold">1080p60 Erotic HD &bull; Live Audio On</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <button class="hover:text-rose-400" title="Audio">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"/></svg>
+                </button>
+                <button class="hover:text-rose-400" title="Fullscreen">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l3.293 3.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-3.293 3.293a1 1 0 11-1.414-1.414L13.586 5H12zm-9 9a1 1 0 012 0v1.586l3.293-3.293a1 1 0 011.414 1.414L6.414 15H8a1 1 0 010 2H4a1 1 0 01-1-1v-4zm13-1a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 010-2h1.586l-3.293-3.293a1 1 0 011.414-1.414L15 13.586V12a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Tip Menu Bar -->
+          <div class="glass-card rounded-2xl p-4 border-rose-950 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <span class="text-rose-300 font-bold flex items-center gap-1.5">
+              <span>⚡</span> Interactive Tip Menu:
+            </span>
+            <div class="flex flex-wrap items-center gap-2">
+              <button onclick="sendTip(10, 'Vibrate Toy (Low)')" class="px-3 py-1.5 rounded-xl bg-rose-950/70 border border-rose-800 text-rose-300 hover:bg-rose-900 transition font-semibold">
+                $10 Vibe 15s
+              </button>
+              <button onclick="sendTip(25, 'Vibrate Toy (High) + Spank')" class="px-3 py-1.5 rounded-xl bg-rose-950/70 border border-rose-800 text-rose-300 hover:bg-rose-900 transition font-semibold">
+                $25 High Vibe
+              </button>
+              <button onclick="sendTip(50, 'Oil Massage on Cam')" class="px-3 py-1.5 rounded-xl sultry-gradient text-white font-bold transition shadow">
+                $50 Oil Massage
+              </button>
+              <button onclick="sendTip(100, 'Custom Request Shoutout')" class="px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black transition shadow">
+                $100 Custom Climax
+              </button>
+            </div>
+          </div>
+
+          <!-- Stream Title & Creator Meta -->
+          <div class="glass-card rounded-2xl p-6 border-rose-950 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <h2 class="text-xl font-serif font-black text-white">Late Night Bedroom Oil &amp; Interactive Toy Session</h2>
+                <p class="text-xs text-rose-300 mt-1">Starring <span class="text-rose-400 font-bold">Brooke Sterling</span> &bull; 100% Uncensored Live</p>
+              </div>
+            </div>
+            <p class="text-xs text-rose-100/80 leading-relaxed font-normal">
+              Hey lovers! Answering chat requests, testing my favorite Bluetooth toy (your tips control the vibration level!), and getting completely naked. VIP members get priority chat highlights.
+            </p>
+          </div>
+        </div>
+
+        <!-- Simulated Live Chat & Tip Feed (4 cols) -->
+        <div class="lg:col-span-4 flex flex-col h-[560px] glass-card rounded-3xl border-rose-950 overflow-hidden shadow-2xl">
+          <div class="p-4 border-b border-rose-950 bg-black/60 flex items-center justify-between text-xs">
+            <div class="font-bold text-rose-200 flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+              Live VIP Uncensored Chat
+            </div>
+            <span class="text-rose-400 text-[11px] font-semibold">Subscribers Only</span>
+          </div>
+
+          <!-- Chat Messages Scroll -->
+          <div class="flex-1 p-4 overflow-y-auto space-y-3 text-xs" id="chat-messages">
+            <div class="p-2.5 rounded-xl bg-rose-600/20 border border-rose-500/30 text-rose-300 font-medium">
+              <span class="font-bold">Brooke Sterling:</span> Welcome in angels! Tips over $10 activate my vibe directly! ❤️
+            </div>
+            <div class="space-y-1">
+              <span class="font-bold text-amber-300">ShadowKing (VIP):</span> You look absolutely gorgeous tonight Brooke!
+            </div>
+            <div class="space-y-1">
+              <span class="font-bold text-purple-400">Chloe_V:</span> Get it girl! Sending love from across town 🔥
+            </div>
+            <div class="p-2.5 rounded-xl bg-amber-500/20 border border-amber-500/30 text-amber-200 font-semibold">
+              <span>🎉 <strong>AlexT</strong> tipped $50: "For the warm body oil!"</span>
+            </div>
+            <div class="space-y-1">
+              <span class="font-bold text-rose-300">Devon_99:</span> Can't wait for Friday's duo stream with Elena!
+            </div>
+            <div class="space-y-1">
+              <span class="font-bold text-rose-400">Brooke Sterling:</span> Thank you Alex!! Starting the oil now baby!
+            </div>
+          </div>
+
+          <!-- Chat Input -->
+          <div class="p-3 border-t border-rose-950 bg-black/80">
+            <form onsubmit="handleSendChat(event)" class="flex gap-2">
+              <input type="text" id="chat-input-text" placeholder="Send an erotic message..." class="flex-1 bg-slate-950 border border-rose-900 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-rose-500">
+              <button type="submit" class="px-4 py-2 sultry-gradient hover:opacity-95 text-white rounded-xl text-xs font-bold shadow">
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- UPCOMING SCHEDULED STREAMS -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-xl font-serif font-black text-white">Upcoming Scheduled Adult Shows</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="glass-card rounded-2xl p-4 border-rose-950 flex items-center justify-between">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-rose-400">Halloween Midnight Special &bull; Oct 31, 11:59 PM</span>
+                <span class="bg-rose-600/30 text-rose-300 text-[10px] px-2 py-0.5 rounded-full font-bold">VIP DUO SHOW</span>
+              </div>
+              <h4 class="text-sm font-bold text-white">Latex &amp; Vampire Erotica with Elena Noir</h4>
+              <p class="text-xs text-rose-200/70">Uncensored 2-girl interactive live dungeon special</p>
+            </div>
+            <button class="px-3.5 py-2 rounded-xl border border-rose-900 hover:bg-slate-900 text-rose-300 text-xs font-bold">
+              Remind Me
+            </button>
+          </div>
+
+          <div class="glass-card rounded-2xl p-4 border-rose-950 flex items-center justify-between">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-bold text-amber-400">Sunday Sunset &bull; Nov 2, 6:00 PM</span>
+                <span class="bg-amber-500/20 text-amber-300 text-[10px] px-2 py-0.5 rounded-full font-bold">PUBLIC TEASER SHOW</span>
+              </div>
+              <h4 class="text-sm font-bold text-white">Lingerie Try-On &amp; Q&amp;A Session</h4>
+              <p class="text-xs text-rose-200/70">Free preview session open to all registered accounts</p>
+            </div>
+            <button class="px-3.5 py-2 rounded-xl border border-rose-900 hover:bg-slate-900 text-rose-300 text-xs font-bold">
+              Remind Me
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 6: MEMBER DASHBOARD ================= -->
+    <section id="view-dashboard" class="view-panel space-y-8 hidden">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-rose-950 pb-6">
+        <div>
+          <h1 class="text-3xl font-serif font-black text-white">Member Sanctuary</h1>
+          <p class="text-rose-300/80 text-sm mt-1" id="dash-greeting">Welcome back, VIP Uncensored Member</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs text-rose-400 font-semibold">Account ID: #ADULT-USR-90241</span>
+        </div>
+      </div>
+
+      <!-- MEMBER STATS ROW -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="member-stats-row">
+        <!-- Injected via updateDashboard() -->
+      </div>
+
+      <!-- DASHBOARD TABS -->
+      <div class="glass-card rounded-3xl p-6 border-rose-950 space-y-6">
+        <h3 class="text-xl font-serif font-black text-white">Your Unlocked Adult Media Vault</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="unlocked-media-list">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- BILLING & SETTINGS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-card rounded-3xl p-6 border-rose-950 space-y-4">
+          <h3 class="text-lg font-serif font-bold text-white">Subscription &amp; Discreet Billing</h3>
+          <div class="space-y-3 text-xs" id="billing-status-box">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 border-rose-950 space-y-4">
+          <h3 class="text-lg font-serif font-bold text-white">Security &amp; Privacy Protocol</h3>
+          <div class="space-y-2 text-xs text-rose-200/80">
+            <p><strong>18+ Age Verification:</strong> Confirmed on Oct 28, 2026</p>
+            <p><strong>Discreet Statement Descriptor:</strong> Appears as "BC_MEDIA_NETWORK" on statements.</p>
+          </div>
+          <div class="pt-2 flex flex-wrap gap-2 text-xs">
+            <button onclick="alert('Export data request initiated. An encrypted archive link will be sent to your email.')" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-rose-300 border border-rose-900">
+              Download Account Data
+            </button>
+            <button onclick="alert('Account deletion requires secondary confirmation to purge your records.')" class="px-4 py-2 rounded-xl border border-red-500/40 text-red-400 hover:bg-red-500/10">
+              Request Full Deletion
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 7: ADMIN DASHBOARD ================= -->
+    <section id="view-admin" class="view-panel space-y-8 hidden">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-amber-500/30 pb-6">
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-3xl font-serif font-black text-white">Admin Studio &amp; 2257 Control Center</h1>
+            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] font-black uppercase">
+              OWNER PRIVILEGES
+            </span>
+          </div>
+          <p class="text-rose-200/70 text-sm mt-1">Manage performers, 2257 compliance documents, adult releases, live shows, and revenue.</p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="openNewContentModal()" class="px-5 py-2.5 sultry-gradient hover:opacity-95 text-white text-xs font-bold rounded-xl flex items-center gap-1.5 shadow-lg shadow-rose-950">
+            <span>+</span> Upload New Adult Set
+          </button>
+        </div>
+      </div>
+
+      <!-- BUSINESS METRICS ROW -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="glass-card rounded-2xl p-5 border-rose-950">
+          <div class="text-xs text-rose-300 font-medium">Monthly Adult Gross</div>
+          <div class="text-2xl sm:text-3xl font-black text-white mt-1">$21,480</div>
+          <div class="text-[11px] text-emerald-400 mt-1">&uarr; +24.8% vs last month</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 border-rose-950">
+          <div class="text-xs text-rose-300 font-medium">VIP Active Subscribers</div>
+          <div class="text-2xl sm:text-3xl font-black text-white mt-1">894</div>
+          <div class="text-[11px] text-emerald-400 mt-1">2.9% Churn rate (Excellent)</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 border-rose-950">
+          <div class="text-xs text-rose-300 font-medium">PPV Drop Sales</div>
+          <div class="text-2xl sm:text-3xl font-black text-white mt-1">312</div>
+          <div class="text-[11px] text-rose-400 mt-1">Malibu Duos top seller</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 border-rose-950">
+          <div class="text-xs text-rose-300 font-medium">Performers &amp; 2257</div>
+          <div class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">3 / 3</div>
+          <div class="text-[11px] text-emerald-400 mt-1">100% Certified Valid</div>
+        </div>
+      </div>
+
+      <!-- ADMIN SUB-TABS: CREATOR COMPLIANCE & CONTENT CMS -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Creator & 2257 Record Verification Queue (6 cols) -->
+        <div class="lg:col-span-6 glass-card rounded-3xl p-6 border-rose-950 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-serif font-black text-white">18 U.S.C. § 2257 Performer Records</h3>
+            <span class="text-xs text-emerald-400 font-bold">100% In Compliance</span>
+          </div>
+          <p class="text-xs text-rose-200/70">Mandatory federal requirement: government photo ID, birth verification, and signed appearance release forms must be checked before publishing any adult content.</p>
+
+          <div class="space-y-3 pt-2 text-xs">
+            <div class="p-3.5 bg-black/80 rounded-2xl border border-rose-950 flex items-center justify-between">
+              <div>
+                <div class="font-bold text-white flex items-center gap-1.5">
+                  Brooke Sterling (Owner)
+                  <span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-300 text-[10px] rounded-full font-bold">2257 PASSED</span>
+                </div>
+                <div class="text-slate-400 text-[11px] mt-0.5">DOB: 1998-04-12 &bull; CA Driver's Lic #8921 &bull; Custody #01</div>
+              </div>
+              <button class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-rose-300 border border-rose-900 rounded-xl text-[11px] font-semibold">
+                Inspect Dossier
+              </button>
+            </div>
+
+            <div class="p-3.5 bg-black/80 rounded-2xl border border-rose-950 flex items-center justify-between">
+              <div>
+                <div class="font-bold text-white flex items-center gap-1.5">
+                  Chloe V. (Guest Performer)
+                  <span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-300 text-[10px] rounded-full font-bold">2257 PASSED</span>
+                </div>
+                <div class="text-slate-400 text-[11px] mt-0.5">DOB: 1999-08-22 &bull; NY Passport #4412 &bull; Duo Waiver Executed</div>
+              </div>
+              <button class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-rose-300 border border-rose-900 rounded-xl text-[11px] font-semibold">
+                Inspect Dossier
+              </button>
+            </div>
+
+            <div class="p-3.5 bg-black/80 rounded-2xl border border-rose-950 flex items-center justify-between">
+              <div>
+                <div class="font-bold text-white flex items-center gap-1.5">
+                  Elena Noir (Guest Performer)
+                  <span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-300 text-[10px] rounded-full font-bold">2257 PASSED</span>
+                </div>
+                <div class="text-slate-400 text-[11px] mt-0.5">DOB: 1997-11-03 &bull; NV Passport #9018 &bull; Fetish Waiver Executed</div>
+              </div>
+              <button class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-rose-300 border border-rose-900 rounded-xl text-[11px] font-semibold">
+                Inspect Dossier
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Moderation & Takedown Queue (6 cols) -->
+        <div class="lg:col-span-6 glass-card rounded-3xl p-6 border-rose-950 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-serif font-black text-white">DMCA &amp; Content Takedown Queue</h3>
+            <span class="text-xs text-rose-400 font-semibold">0 Infringements</span>
+          </div>
+          <p class="text-xs text-rose-200/70">Audit log for legal takedowns, creator revocation requests, and token rotations.</p>
+
+          <div class="space-y-3 pt-2 text-xs">
+            <div class="p-3.5 bg-black/80 rounded-2xl border border-rose-950 flex items-center justify-between">
+              <div>
+                <span class="text-slate-400">Automated Protection:</span>
+                <span class="text-white font-bold ml-1">Dynamic Watermark Hashing</span>
+                <div class="text-slate-500 text-[11px] mt-0.5">Active &bull; User ID watermarking deters leaking</div>
+              </div>
+              <span class="text-emerald-400 font-bold">Enforced</span>
+            </div>
+
+            <div class="p-3.5 bg-black/80 rounded-2xl border border-rose-950 flex items-center justify-between">
+              <div>
+                <span class="text-slate-400">CDN Storage Token:</span>
+                <span class="text-white font-bold ml-1">Short-Lived Signed URLs</span>
+                <div class="text-slate-500 text-[11px] mt-0.5">Expires in 15 minutes per request</div>
+              </div>
+              <span class="text-emerald-400 font-bold">Protected</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTENT CMS TABLE -->
+      <div class="glass-card rounded-3xl p-6 border-rose-950 space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-serif font-black text-white">Adult Content Library &amp; Paywall CMS</h3>
+          <span class="text-xs text-rose-300 font-semibold">6 Master Releases</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead>
+              <tr class="border-b border-rose-950 text-rose-400 uppercase text-[10px] tracking-wider">
+                <th class="py-3 px-4">Title</th>
+                <th class="py-3 px-4">Performer</th>
+                <th class="py-3 px-4">Access Tier</th>
+                <th class="py-3 px-4">Price</th>
+                <th class="py-3 px-4">Status</th>
+                <th class="py-3 px-4 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-rose-950/60" id="admin-content-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= MEDIA PREVIEW / PAYWALL MODAL ================= -->
+  <div id="media-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md hidden">
+    <div class="bg-[#140a10] border-2 border-rose-600/40 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative text-left" id="media-modal-card">
+      <button onclick="closeMediaModal()" class="absolute top-4 right-4 text-rose-400 hover:text-white p-1">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div id="media-modal-content">
+        <!-- Injected via JavaScript based on access -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SIMULATED CHECKOUT MODAL ================= -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md hidden">
+    <div class="bg-[#140a10] border-2 border-rose-500 rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-rose-400 hover:text-white p-1">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="space-y-4">
+        <div class="w-14 h-14 rounded-2xl bg-rose-600/20 border border-rose-500/40 text-rose-400 flex items-center justify-center shadow-lg">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+        </div>
+
+        <div>
+          <span class="text-[10px] font-black uppercase tracking-wider text-rose-300 bg-rose-600/20 px-2.5 py-0.5 rounded-full border border-rose-500/40">
+            Discreet Adult Checkout Simulation
+          </span>
+          <h3 class="text-2xl font-serif font-black text-white mt-2" id="checkout-item-title">VIP Uncensored</h3>
+          <p class="text-xs text-rose-200/70" id="checkout-item-desc">Monthly Recurring Membership with 30-day auto-renew.</p>
+        </div>
+
+        <div class="p-4 bg-black/80 rounded-2xl border border-rose-950 flex items-center justify-between">
+          <span class="text-xs text-rose-300 font-semibold">Total Due Today:</span>
+          <span class="text-3xl font-black text-rose-500" id="checkout-item-price">$19.99</span>
+        </div>
+
+        <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-3.5 text-[11px] text-amber-200 space-y-1">
+          <p class="font-bold flex items-center gap-1.5">
+            <span>🛡️</span> Test Mode Notice:
+          </p>
+          <p>No real payment cards are charged. This demonstrates the seamless high-risk adult billing adapter (compatible with CCBill, Segpay, or Epoch high-risk merchant processing).</p>
+        </div>
+
+        <div class="space-y-3 pt-2">
+          <div class="text-xs text-rose-300 font-medium">Discreet Billing Simulator:</div>
+          <div class="p-3 bg-black/90 border border-rose-900 rounded-xl flex items-center justify-between text-xs text-slate-200">
+            <span class="flex items-center gap-2">
+              <span>💳</span> Adult Gateway Token: •••• 6969
+            </span>
+            <span class="text-emerald-400 font-bold">Encrypted</span>
+          </div>
+
+          <button onclick="executeSimulatedPayment()" class="w-full py-4 rounded-2xl sultry-gradient hover:opacity-95 text-white font-bold text-xs shadow-xl shadow-rose-950 transition uppercase tracking-wider">
+            Confirm &amp; Instant Unlock Uncensored Access
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT STATE ENGINE ================= -->
+  <script>
+    // System State
+    const state = {
+      role: 'vip', // 'guest', 'free', 'vip', 'admin'
+      currentTab: 'home',
+      currentFilter: 'all',
+      purchasedPackages: ['pkg_1'], // Velvet bedroom archive unlocked by default for demo
+      checkoutItem: null,
+      isStreaming: true
+    };
+
+    // Adult Content Mock Database
+    const catalogItems = [
+      {
+        id: 'cnt_1',
+        title: 'Uncensored Midnight Oil: 4K Nude Boudoir',
+        creator: 'Brooke Sterling',
+        creatorHandle: '@brooke',
+        tier: 'sub',
+        type: '4K Full Nude (38 Photos)',
+        badge: '🔞 100% NUDE VIP',
+        price: 19.99,
+        packageId: null,
+        image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80',
+        description: 'Sensual, dripping wet midnight oil photography in the master bedroom. Zero underwear, pure aesthetic raw passion.',
+        signedUrl: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=90',
+        published: true
+      },
+      {
+        id: 'cnt_2',
+        title: 'Velvet & Vibrations: 4K Erotic Solo Video',
+        creator: 'Brooke Sterling',
+        creatorHandle: '@brooke',
+        tier: 'sub',
+        type: 'Explicit 4K Video (22 Mins)',
+        badge: '🔞 EXPLICIT SOLO',
+        price: 19.99,
+        packageId: null,
+        image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80',
+        description: 'Uncensored 4K cinematic solo release. Brooke explores her favorite toys in the candlelit suite with authentic orgasmic audio.',
+        signedUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=90',
+        published: true
+      },
+      {
+        id: 'cnt_3',
+        title: 'Malibu Terrace: Brooke & Chloe Erotic Collab',
+        creator: 'Chloe V. & Brooke',
+        creatorHandle: '@chloev',
+        tier: 'sub',
+        type: 'Duo Collab (45 Photos)',
+        badge: '💋 UNCENSORED DUO',
+        price: 19.99,
+        packageId: null,
+        image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80',
+        description: 'Full nude collaborative photoshoot with guest creator Chloe V. Sensual duo massage and heated poolside terrace chemistry. Certified 2257 mutual consent.',
+        signedUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=90',
+        published: true
+      },
+      {
+        id: 'cnt_4',
+        title: 'The Velvet Bedroom Archive (Uncut Master Drop)',
+        creator: 'Brooke Sterling',
+        creatorHandle: '@brooke',
+        tier: 'package',
+        packageId: 'pkg_1',
+        type: '50 Nude Photos + 18min 4K Video',
+        badge: '💎 PPV DROP $14.99',
+        price: 14.99,
+        image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80',
+        description: 'The master suite collection uncut. Full nudity, sheer stockings, and high-resolution master file downloads for permanent ownership.',
+        signedUrl: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=90',
+        published: true
+      },
+      {
+        id: 'cnt_5',
+        title: 'Latex & Chains: Elena Noir & Brooke',
+        creator: 'Elena Noir & Brooke',
+        creatorHandle: '@elenanoir',
+        tier: 'package',
+        packageId: 'pkg_2',
+        type: 'Fetish PPV Bundle (28 Mins)',
+        badge: '💎 PPV DROP $24.99',
+        price: 24.99,
+        image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=700&q=80',
+        description: 'Dark gothic erotica, tight black latex suits, blindfolds, and explicit dominance play filmed in a private dungeon suite.',
+        signedUrl: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=90',
+        published: true
+      },
+      {
+        id: 'cnt_6',
+        title: 'Silk Robe Teaser: Morning Lingerie Confessions',
+        creator: 'Brooke Sterling',
+        creatorHandle: '@brooke',
+        tier: 'free',
+        type: 'SFW Teaser Vlog (7 Mins)',
+        badge: '🆓 FREE SFW TEASER',
+        price: 0,
+        packageId: null,
+        image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80',
+        description: 'A seductive morning greeting in a silk lace robe. Brooke talks about tonight\'s uncensored live show and gives a playful peek.',
+        signedUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=90',
+        published: true
+      }
+    ];
+
+    // Access Control Logic
+    function checkAccess(item) {
+      if (state.role === 'admin') return true;
+      if (item.tier === 'free') return true;
+      if (item.tier === 'sub') {
+        return state.role === 'vip';
+      }
+      if (item.tier === 'package') {
+        return state.purchasedPackages.includes(item.packageId);
+      }
+      return false;
+    }
+
+    // Role Switcher
+    function setRole(newRole) {
+      state.role = newRole;
+
+      document.querySelectorAll('.role-btn').forEach(btn => {
+        btn.classList.remove('bg-rose-600', 'bg-amber-500', 'text-white', 'text-black', 'shadow-sm');
+        btn.classList.add('text-slate-400');
+      });
+
+      const activeBtn = document.getElementById(`btn-role-${newRole}`);
+      if (newRole === 'admin') {
+        activeBtn.classList.remove('text-slate-400');
+        activeBtn.classList.add('bg-amber-500', 'text-black', 'shadow-sm');
+      } else {
+        activeBtn.classList.remove('text-slate-400');
+        activeBtn.classList.add('bg-rose-600', 'text-white', 'shadow-sm');
+      }
+
+      // Show/Hide Admin Nav Tab
+      const adminNav = document.getElementById('nav-admin');
+      if (newRole === 'admin') {
+        adminNav.classList.remove('hidden');
+      } else {
+        adminNav.classList.add('hidden');
+        if (state.currentTab === 'admin') switchTab('home');
+      }
+
+      updateUserBadge();
+      renderCards();
+      updateStreamPlayer();
+      updateDashboard();
+      updateAdminTable();
+    }
+
+    // Update Top Right User Badge
+    function updateUserBadge() {
+      const container = document.getElementById('user-badge-container');
+      if (state.role === 'guest') {
+        container.innerHTML = `
+          <button onclick="setRole('free'); switchTab('dashboard');" class="text-xs text-rose-300 hover:text-white px-3 py-1.5 transition font-semibold">Log In</button>
+          <button onclick="switchTab('memberships')" class="text-xs sultry-gradient text-white font-bold px-4 py-2 rounded-xl transition shadow-lg shadow-rose-950">Join Free</button>
+        `;
+      } else if (state.role === 'free') {
+        container.innerHTML = `
+          <span class="text-xs text-rose-200">Hi, <strong>Free_Member</strong></span>
+          <span class="px-2.5 py-0.5 rounded-full bg-slate-900 text-rose-300 text-[10px] font-bold border border-rose-900">SFW Preview</span>
+          <button onclick="switchTab('memberships')" class="text-xs sultry-gradient text-white font-bold px-3 py-1.5 rounded-xl shadow">Unlock VIP</button>
+        `;
+      } else if (state.role === 'vip') {
+        container.innerHTML = `
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded-full sultry-gradient flex items-center justify-center text-white text-xs font-bold shadow-md">
+              👑
+            </div>
+            <div class="text-left hidden sm:block">
+              <div class="text-xs font-bold text-white leading-none">VIP Uncensored</div>
+              <div class="text-[10px] text-rose-400 font-semibold">Full Nude Vault Active</div>
+            </div>
+          </div>
+        `;
+      } else if (state.role === 'admin') {
+        container.innerHTML = `
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500 flex items-center justify-center text-amber-300 text-xs font-bold">
+              🛡️
+            </div>
+            <div class="text-left hidden sm:block">
+              <div class="text-xs font-bold text-white leading-none">Brooke (Owner)</div>
+              <div class="text-[10px] text-amber-400">Admin Mode</div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Switch Tab
+    function switchTab(tabId) {
+      state.currentTab = tabId;
+      document.querySelectorAll('.view-panel').forEach(panel => panel.classList.add('hidden'));
+      document.getElementById(`view-${tabId}`).classList.remove('hidden');
+
+      document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.classList.remove('text-rose-400', 'font-black');
+        tab.classList.add('text-slate-300');
+      });
+      const activeNav = document.getElementById(`nav-${tabId}`);
+      if (activeNav) {
+        activeNav.classList.remove('text-slate-300');
+        activeNav.classList.add('text-rose-400', 'font-black');
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Filter Catalog
+    function filterCatalog(filter) {
+      state.currentFilter = filter;
+      document.querySelectorAll('.cat-filter').forEach(btn => {
+        btn.classList.remove('bg-rose-600', 'text-white', 'shadow-md');
+        btn.classList.add('bg-slate-900', 'text-rose-300');
+      });
+      const activeFilter = document.getElementById(`filter-${filter}`);
+      if (activeFilter) {
+        activeFilter.classList.remove('bg-slate-900', 'text-rose-300');
+        activeFilter.classList.add('bg-rose-600', 'text-white', 'shadow-md');
+      }
+      renderCards();
+    }
+
+    // Render Cards
+    function renderCards() {
+      const catalogGrid = document.getElementById('full-catalog-grid');
+      const homeGrid = document.getElementById('home-trending-grid');
+
+      const filtered = catalogItems.filter(item => {
+        if (state.currentFilter === 'all') return true;
+        if (state.currentFilter === 'free') return item.tier === 'free';
+        if (state.currentFilter === 'sub') return item.tier === 'sub';
+        if (state.currentFilter === 'package') return item.tier === 'package';
+        return true;
+      });
+
+      const cardHtml = (item) => {
+        const hasAccess = checkAccess(item);
+        return `
+          <div class="glass-card rounded-3xl overflow-hidden border border-rose-950/80 hover:border-rose-500/50 transition-all flex flex-col justify-between group">
+            <div class="relative aspect-[4/3] overflow-hidden bg-black cursor-pointer" onclick="openMediaModal('${item.id}')">
+              <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${!hasAccess ? 'filter blur-[4px] brightness-65' : ''}">
+              
+              <div class="absolute top-3 left-3">
+                <span class="text-[10px] font-black px-2.5 py-1 rounded-full backdrop-blur-md ${
+                  item.tier === 'free' ? 'bg-emerald-600/90 text-white' :
+                  item.tier === 'sub' ? 'sultry-gradient text-white shadow-md' :
+                  'bg-amber-500/95 text-black'
+                }">
+                  ${item.badge}
+                </span>
+              </div>
+
+              ${!hasAccess ? `
+                <div class="absolute inset-0 bg-black/60 backdrop-blur-[3px] flex flex-col items-center justify-center p-4 text-center">
+                  <div class="w-12 h-12 rounded-full bg-rose-600/20 text-rose-400 flex items-center justify-center mb-2 border border-rose-500/50 shadow-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                  </div>
+                  <span class="text-xs font-black text-white uppercase tracking-wider">Explicit Adult Content</span>
+                  <span class="text-[11px] text-rose-300 mt-1 font-medium">${item.tier === 'sub' ? 'Requires VIP Uncensored Access' : 'Requires PPV Unlock'}</span>
+                </div>
+              ` : `
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                  <span class="text-xs font-bold text-rose-300 flex items-center gap-1">
+                    <span>▶</span> Play Uncensored 4K Stream
+                  </span>
+                </div>
+              `}
+            </div>
+
+            <div class="p-5 space-y-2.5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-[11px] text-rose-300/80 mb-1">
+                  <span class="font-bold">${item.type}</span>
+                  <span class="text-rose-400 font-semibold">${item.creatorHandle}</span>
+                </div>
+                <h3 class="text-sm font-serif font-black text-white group-hover:text-rose-400 transition line-clamp-1">${item.title}</h3>
+                <p class="text-xs text-rose-100/70 mt-1 line-clamp-2 leading-relaxed font-normal">${item.description}</p>
+              </div>
+
+              <div class="pt-3 border-t border-rose-950 flex items-center justify-between">
+                <span class="text-xs font-black text-white">
+                  ${item.price === 0 ? 'Free SFW' : '$' + item.price.toFixed(2)}
+                </span>
+                ${hasAccess ? `
+                  <button onclick="openMediaModal('${item.id}')" class="px-3.5 py-1.5 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-bold hover:bg-emerald-500/30 transition">
+                    ✓ Unlocked
+                  </button>
+                ` : item.tier === 'package' ? `
+                  <button onclick="openCheckoutModal('package', '${item.title}', ${item.price})" class="px-3.5 py-1.5 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-bold hover:bg-amber-500/30 transition">
+                    Unlock PPV ($${item.price.toFixed(2)})
+                  </button>
+                ` : `
+                  <button onclick="switchTab('memberships')" class="px-3.5 py-1.5 rounded-xl sultry-gradient hover:opacity-95 text-white text-xs font-bold transition shadow">
+                    Go VIP ($19.99)
+                  </button>
+                `}
+              </div>
+            </div>
+          </div>
+        `;
+      };
+
+      if (catalogGrid) catalogGrid.innerHTML = filtered.map(cardHtml).join('');
+      if (homeGrid) homeGrid.innerHTML = catalogItems.slice(0, 4).map(cardHtml).join('');
+    }
+
+    // Media Modal (Simulating Server-Side Entitlement & Signed URL)
+    function openMediaModal(itemId) {
+      const item = catalogItems.find(c => c.id === itemId);
+      if (!item) return;
+
+      const hasAccess = checkAccess(item);
+      const modal = document.getElementById('media-modal');
+      const content = document.getElementById('media-modal-content');
+
+      if (hasAccess) {
+        content.innerHTML = `
+          <div class="space-y-4">
+            <div class="flex items-center justify-between pr-8">
+              <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/30">
+                🔒 Protected Stream &bull; Access Granted
+              </span>
+              <span class="text-[10px] text-rose-300 font-mono">Token Exp: 15m (Encrypted)</span>
+            </div>
+
+            <h3 class="text-2xl font-serif font-black text-white">${item.title}</h3>
+            <p class="text-xs text-rose-400 font-semibold">Starring ${item.creator} &bull; ${item.type} &bull; 18 U.S.C. 2257 Verified</p>
+
+            <div class="rounded-2xl overflow-hidden border border-rose-950 bg-black aspect-video relative flex items-center justify-center">
+              <img src="${item.signedUrl}" class="w-full h-full object-cover">
+              <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur px-3 py-1 rounded-xl text-[10px] text-rose-200 border border-white/10">
+                Dynamic Watermark: #${state.role.toUpperCase()}_49021
+              </div>
+            </div>
+
+            <p class="text-xs text-rose-100/80 leading-relaxed">${item.description}</p>
+            <div class="pt-2 flex justify-end">
+              <button onclick="closeMediaModal()" class="px-6 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl border border-rose-900">
+                Close Viewer
+              </button>
+            </div>
+          </div>
+        `;
+      } else {
+        content.innerHTML = `
+          <div class="space-y-5 text-center py-4">
+            <div class="w-16 h-16 rounded-full bg-rose-600/20 border-2 border-rose-500 text-rose-400 mx-auto flex items-center justify-center shadow-lg">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <div>
+              <span class="text-[11px] font-black uppercase tracking-wider text-rose-400">18+ Protected Adult Media</span>
+              <h3 class="text-2xl font-serif font-black text-white mt-1">${item.title}</h3>
+              <p class="text-xs text-rose-200/80 max-w-md mx-auto mt-2 leading-relaxed">
+                ${item.tier === 'sub' 
+                  ? 'This full-nude master cut is reserved for active VIP Uncensored subscribers.' 
+                  : 'This is an exclusive standalone vault drop. Purchase below for permanent access.'}
+              </p>
+            </div>
+
+            <div class="p-3.5 bg-black/90 rounded-2xl border border-rose-950 max-w-sm mx-auto text-xs text-rose-300 flex items-center justify-between">
+              <span>Required Access:</span>
+              <span class="font-bold text-white">${item.tier === 'sub' ? 'VIP Uncensored ($19.99/mo)' : 'PPV Package ($' + item.price + ')'}</span>
+            </div>
+
+            <div class="flex items-center justify-center gap-3 pt-2">
+              <button onclick="closeMediaModal()" class="px-5 py-2.5 rounded-xl border border-rose-900 text-slate-300 hover:bg-slate-900 text-xs font-semibold">
+                Cancel
+              </button>
+              ${item.tier === 'sub' ? `
+                <button onclick="closeMediaModal(); switchTab('memberships');" class="px-7 py-2.5 rounded-xl sultry-gradient text-white text-xs font-bold shadow-lg shadow-rose-950">
+                  Subscribe to VIP ($19.99/mo)
+                </button>
+              ` : `
+                <button onclick="closeMediaModal(); openCheckoutModal('package', '${item.title}', ${item.price});" class="px-7 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black text-xs font-black shadow-lg">
+                  Buy Package Now ($${item.price})
+                </button>
+              `}
+            </div>
+          </div>
+        `;
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeMediaModal() {
+      document.getElementById('media-modal').classList.add('hidden');
+    }
+
+    // Checkout Simulation
+    function openCheckoutModal(type, title, price) {
+      state.checkoutItem = { type, title, price };
+      document.getElementById('checkout-item-title').innerText = title;
+      document.getElementById('checkout-item-price').innerText = `$${price.toFixed(2)}`;
+      document.getElementById('checkout-item-desc').innerText = type === 'sub' 
+        ? 'Monthly recurring adult membership with discreet billing and instant access.' 
+        : 'One-time vault unlock with lifetime access in your private account.';
+      document.getElementById('checkout-modal').classList.remove('hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkout-modal').classList.add('hidden');
+    }
+
+    function executeSimulatedPayment() {
+      if (!state.checkoutItem) return;
+
+      if (state.checkoutItem.type === 'sub') {
+        state.role = 'vip';
+        setRole('vip');
+        alert(`Success! Simulated subscription to "${state.checkoutItem.title}" activated. All 100% nude sets and live sessions are now unlocked!`);
+      } else {
+        state.purchasedPackages.push('pkg_2');
+        alert(`Success! Standalone PPV "${state.checkoutItem.title}" purchased. Content has been added to your vault.`);
+      }
+
+      closeCheckoutModal();
+      renderCards();
+      updateDashboard();
+      updateStreamPlayer();
+    }
+
+    // Stream Player Logic
+    function updateStreamPlayer() {
+      const lockOverlay = document.getElementById('stream-lock-overlay');
+      const playingIndicator = document.getElementById('stream-playing-indicator');
+      
+      const hasStreamAccess = state.role === 'vip' || state.role === 'admin';
+      if (!hasStreamAccess) {
+        lockOverlay.classList.remove('hidden');
+        playingIndicator.classList.add('hidden');
+      } else {
+        lockOverlay.classList.add('hidden');
+        playingIndicator.classList.remove('hidden');
+      }
+    }
+
+    function togglePlayStream() {
+      alert("Simulated Erotic HLS Provider (Lovense & Livepeer adapter active)");
+    }
+
+    function handleSendChat(e) {
+      e.preventDefault();
+      const input = document.getElementById('chat-input-text');
+      const val = input.value.trim();
+      if (!val) return;
+
+      const chatBox = document.getElementById('chat-messages');
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'space-y-1';
+      msgDiv.innerHTML = `<span class="font-bold text-rose-400">You (${state.role.toUpperCase()}):</span> <span>${val}</span>`;
+      chatBox.appendChild(msgDiv);
+      input.value = '';
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function sendTip(amount, action) {
+      const chatBox = document.getElementById('chat-messages');
+      const tipDiv = document.createElement('div');
+      tipDiv.className = 'p-2.5 rounded-xl sultry-gradient text-white text-xs font-bold shadow-lg';
+      tipDiv.innerHTML = `🔥 You tipped $${amount} for: "${action}"! Brooke is responding on cam!`;
+      chatBox.appendChild(tipDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Member Dashboard Logic
+    function updateDashboard() {
+      const statsRow = document.getElementById('member-stats-row');
+      const greeting = document.getElementById('dash-greeting');
+      const billingBox = document.getElementById('billing-status-box');
+      const unlockedList = document.getElementById('unlocked-media-list');
+
+      if (state.role === 'vip') {
+        greeting.innerText = 'Welcome back, VIP Uncensored Member';
+        statsRow.innerHTML = `
+          <div class="glass-card rounded-2xl p-4 border-rose-950">
+            <div class="text-xs text-rose-300">Plan Tier</div>
+            <div class="text-xl font-black text-rose-500 mt-1">👑 VIP Uncensored</div>
+            <div class="text-[10px] text-emerald-400 font-bold mt-0.5">● Active ($19.99/mo)</div>
+          </div>
+          <div class="glass-card rounded-2xl p-4 border-rose-950">
+            <div class="text-xs text-rose-300">Next Auto-Renew</div>
+            <div class="text-xl font-bold text-white mt-1">Nov 28, 2026</div>
+            <div class="text-[10px] text-rose-300 mt-0.5">Discreet Billing Active</div>
+          </div>
+          <div class="glass-card rounded-2xl p-4 border-rose-950">
+            <div class="text-xs text-rose-300">Unlocked Vault Items</div>
+            <div class="text-xl font-bold text-white mt-1">140+ Explicit Works</div>
+            <div class="text-[10px] text-rose-300 mt-0.5">100% Uncensored Access</div>
+          </div>
+          <div class="glass-card rounded-2xl p-4 border-rose-950">
+            <div class="text-xs text-rose-300">Purchased PPV Bundles</div>
+            <div class="text-xl font-bold text-amber-400 mt-1">${state.purchasedPackages.length} Master Drops</div>
+            <div class="text-[10px] text-slate-400 mt-0.5">Permanent Ownership</div>
+          </div>
+        `;
+
+        billingBox.innerHTML = `
+          <div class="flex items-center justify-between pb-2 border-b border-rose-950">
+            <span>Membership Status:</span>
+            <span class="text-emerald-400 font-bold">● Active Uncensored VIP</span>
+          </div>
+          <div class="flex items-center justify-between pb-2 border-b border-rose-950">
+            <span>High-Risk Processor:</span>
+            <span class="text-slate-300">Adult Merchant Adapter (CCBill Sandbox)</span>
+          </div>
+          <div class="flex items-center justify-between pb-2 border-b border-rose-950">
+            <span>Billing Interval:</span>
+            <span class="text-slate-300">$19.99 monthly on the 28th</span>
+          </div>
+          <div class="pt-2 flex gap-2">
+            <button onclick="alert('Subscription cancellation scheduled at end of current billing cycle (Nov 28). Access remains active until then.')" class="px-3.5 py-2 rounded-xl border border-rose-900 hover:bg-slate-900 text-rose-300 text-xs font-semibold">
+              Cancel Auto-Renewal
+            </button>
+            <button onclick="alert('Invoices list exported with discreet descriptors.')" class="px-3.5 py-2 rounded-xl bg-slate-900 text-slate-300 text-xs">
+              View Receipts
+            </button>
+          </div>
+        `;
+      } else {
+        greeting.innerText = 'Welcome back, Free Member (SFW Preview)';
+        statsRow.innerHTML = `
+          <div class="glass-card rounded-2xl p-4 border-rose-950">
+            <div class="text-xs text-rose-300">Plan Tier</div>
+            <div class="text-xl font-bold text-slate-300 mt-1">Free SFW Account</div>
+            <div class="text-[10px] text-slate-400 mt-0.5">$0/month</div>
+          </div>
+          <div class="glass-card rounded-2xl p-4 border-rose-950">
+            <div class="text-xs text-rose-300">Unlocked Vault Items</div>
+            <div class="text-xl font-bold text-white mt-1">1 SFW Teaser</div>
+            <div class="text-[10px] text-rose-400 mt-0.5">Explicit media locked</div>
+          </div>
+          <div class="glass-card rounded-2xl p-4 border-rose-950">
+            <div class="text-xs text-rose-300">Purchased PPV Bundles</div>
+            <div class="text-xl font-bold text-amber-400 mt-1">${state.purchasedPackages.length} Drops</div>
+            <div class="text-[10px] text-slate-400 mt-0.5">Standalone media</div>
+          </div>
+          <div class="glass-card rounded-2xl p-4 border-rose-950">
+            <div class="text-xs text-rose-300">Go Uncensored</div>
+            <button onclick="switchTab('memberships')" class="mt-1 px-3 py-1.5 sultry-gradient text-white rounded-xl text-xs font-bold">
+              Upgrade to VIP
+            </button>
+          </div>
+        `;
+
+        billingBox.innerHTML = `
+          <div class="flex items-center justify-between pb-2 border-b border-rose-950">
+            <span>Membership Status:</span>
+            <span class="text-slate-400">No active recurring subscription</span>
+          </div>
+          <p class="text-rose-200/70 text-xs">Upgrade to VIP Uncensored to unlock all 140+ full-nude photo sets, explicit videos, and live shows.</p>
+          <div class="pt-2">
+            <button onclick="switchTab('memberships')" class="w-full py-2.5 sultry-gradient text-white font-bold rounded-xl text-xs">
+              Join VIP Uncensored ($19.99/mo)
+            </button>
+          </div>
+        `;
+      }
+
+      // Populate unlocked list
+      const unlockedItems = catalogItems.filter(checkAccess);
+      unlockedList.innerHTML = unlockedItems.map(item => `
+        <div class="p-3.5 bg-black/80 rounded-2xl border border-rose-950 flex items-center space-x-3 cursor-pointer hover:border-rose-500/50 transition" onclick="openMediaModal('${item.id}')">
+          <img src="${item.image}" class="w-16 h-14 rounded-xl object-cover shrink-0">
+          <div class="flex-1 min-w-0">
+            <div class="text-xs font-black text-white truncate">${item.title}</div>
+            <div class="text-[10px] text-rose-300">${item.creator} &bull; ${item.type}</div>
+            <span class="text-[10px] text-emerald-400 font-bold mt-0.5 block">▶ Unlocked Uncensored</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Admin CMS Table
+    function updateAdminTable() {
+      const tbody = document.getElementById('admin-content-table-body');
+      if (!tbody) return;
+
+      tbody.innerHTML = catalogItems.map(item => `
+        <tr class="hover:bg-rose-950/20">
+          <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+            <img src="${item.image}" class="w-8 h-8 rounded-lg object-cover">
+            <span>${item.title}</span>
+          </td>
+          <td class="py-3 px-4 text-rose-200">${item.creator}</td>
+          <td class="py-3 px-4">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
+              item.tier === 'free' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' :
+              item.tier === 'sub' ? 'bg-rose-600/30 text-rose-300 border border-rose-500/40' :
+              'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+            }">
+              ${item.tier.toUpperCase()}
+            </span>
+          </td>
+          <td class="py-3 px-4 text-rose-200">${item.price === 0 ? 'Free SFW' : '$' + item.price}</td>
+          <td class="py-3 px-4 text-emerald-400 font-bold">● Published (2257 Verified)</td>
+          <td class="py-3 px-4 text-right space-x-2">
+            <button onclick="alert('Metadata Editor for [${item.title}] opened')" class="text-slate-400 hover:text-white">Edit</button>
+            <button onclick="alert('Access permissions updated')" class="text-rose-400 hover:text-rose-300 font-semibold">Tiers</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function openNewContentModal() {
+      alert("Admin Adult Upload & 2257 Performer Attribution:\n\n1. Select Explicit Media Files (Encrypted S3 Private Storage)\n2. Select Assigned Performer (Brooke, Chloe, Elena)\n3. Verify 2257 Government ID & Appearance Consent Attached\n4. Set Content Tier (SFW Teaser / VIP Uncensored / Standalone PPV Drop)\n5. Watermarking Hash Enabled");
+    }
+
+    // Age Gate Modal
+    function toggleAgeModal(show) {
+      const modal = document.getElementById('age-modal');
+      if (show) modal.classList.remove('hidden');
+      else modal.classList.add('hidden');
+    }
+
+    function acceptAgeGate() {
+      toggleAgeModal(false);
+    }
+
+    // Initial Launch
+    window.addEventListener('DOMContentLoaded', () => {
+      setRole('vip');
+      renderCards();
+      updateDashboard();
+      updateAdminTable();
+      // Show 18+ age gate on first load
+      toggleAgeModal(true);
+    });
+  </script>
+</body>
+</html>

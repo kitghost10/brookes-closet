@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #120d10;
+  --color-panel: #1b1419;
+  --color-line: #2f2229;
+  --color-rose: #e0568a;
+  --color-rose-dim: #b73d6b;
+  --color-cream: #f6ecee;
+  --color-mute: #a89aa1;
+  --font-display: "Georgia", "Times New Roman", serif;
+}
+
+body { background: var(--color-ink); color: var(--color-cream); }
+a { color: inherit; }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-medium transition border border-line bg-panel hover:border-rose cursor-pointer; }
+  .btn-primary { @apply bg-rose border-rose text-white hover:bg-rose-dim; }
+  .btn-danger { @apply border-red-700 text-red-300 hover:bg-red-950; }
+  .btn-sm { @apply px-3 py-1 text-xs; }
+  .input { @apply w-full rounded-lg border border-line bg-ink px-3 py-2 text-sm outline-none focus:border-rose; }
+  .label { @apply mb-1 block text-xs uppercase tracking-wide text-mute; }
+  .card { @apply rounded-2xl border border-line bg-panel p-5; }
+  .table { @apply w-full text-left text-sm; }
+  .table th { @apply border-b border-line px-3 py-2 text-xs font-medium uppercase tracking-wide text-mute; }
+  .table td { @apply border-b border-line/60 px-3 py-2 align-top; }
+  .badge { @apply inline-block rounded-full border border-line px-2 py-0.5 text-xs text-mute; }
+}
